@@ -9,14 +9,14 @@ import { DemoBanner } from "@/components/shared/demo-banner";
 import { generateDemoTxHash, truncateHash } from "@/lib/utils/tx";
 import { useWallet } from "@/lib/hooks/use-wallet";
 
-type Currency = "cUSD" | "CELO";
+type Currency = "USDm" | "CELO";
 type Step = "form" | "confirm" | "success";
 
 const PRESETS = [10, 25, 50, 100];
 
 export default function DonationsPage() {
   const { connected } = useWallet();
-  const [currency, setCurrency] = useState<Currency>("cUSD");
+  const [currency, setCurrency] = useState<Currency>("USDm");
   const [amount, setAmount] = useState(25);
   const [step, setStep] = useState<Step>("form");
   const [txHash, setTxHash] = useState("");
@@ -45,7 +45,7 @@ export default function DonationsPage() {
         <CardHeader>
           <CardTitle>Make a demo donation</CardTitle>
           <CardDescription>
-            {connected ? "Wallet connected — this simulates a real donation flow." : "Connect a wallet above to try the full flow, or continue without one."}
+            {connected ? "Wallet connected. This simulates a real donation flow." : "Connect a wallet above to try the full flow, or continue without one."}
           </CardDescription>
         </CardHeader>
         <CardContent>
@@ -55,7 +55,7 @@ export default function DonationsPage() {
                 <div>
                   <p className="mb-2 text-sm font-medium text-navy-900/70">Currency</p>
                   <div className="grid grid-cols-2 gap-2">
-                    {(["cUSD", "CELO"] as Currency[]).map((c) => (
+                    {(["USDm", "CELO"] as Currency[]).map((c) => (
                       <button
                         key={c}
                         onClick={() => setCurrency(c)}
@@ -137,7 +137,7 @@ export default function DonationsPage() {
                   {copied && <span className="text-green-600">Copied</span>}
                 </button>
                 <p className="text-xs text-navy-900/40">
-                  This is a simulated transaction hash for demo purposes — no real cUSD/CELO moved and nothing was broadcast to the Celo network.
+                  This is a simulated transaction hash for demo purposes. No real USDm or CELO moved, and nothing was broadcast to the Celo network.
                 </p>
                 <Button variant="outline" className="w-full" onClick={reset}>Make another demo donation</Button>
               </motion.div>

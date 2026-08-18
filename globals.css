@@ -1,17 +1,17 @@
 @import "tailwindcss";
 
 /*
-  CeloHT Investor Demo — Design Tokens
+  CeloHT Investor Demo: Design Tokens
   -----------------------------------------------------------------
   Palette: CeloHT's own navy + gold (from the mark) paired with
-  Celo's real ecosystem green (prosperity green, #35D07F) — this is
-  a demo of a product built ON Celo, so the green reads as "powered
+  Celo's real ecosystem green (prosperity green, #35D07F). This is
+  a demo of a product built on Celo, so the green reads as "powered
   by," not a rebrand. Typography reuses Fraunces + IBM Plex, the
   same pairing already established on celoht.com and celoht-admin,
   so this demo feels like the same organization, not a new one.
 
-  Signature element: a thin "growth line" — the ascending-bar arrow
-  from the CeloHT mark — traces once through the hero on load, then
+  Signature element: a thin "growth line," the ascending-bar arrow
+  from the CeloHT mark, traces once through the hero on load and then
   reappears as a quiet corner mark on major section transitions.
 */
 

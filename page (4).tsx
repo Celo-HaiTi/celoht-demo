@@ -32,7 +32,7 @@ export default function SettingsPage() {
     <div className="mx-auto max-w-2xl space-y-6">
       <DemoBanner />
       <Card>
-        <CardHeader><CardTitle>Preferences</CardTitle><CardDescription>Demo settings — nothing here is persisted between sessions</CardDescription></CardHeader>
+        <CardHeader><CardTitle>Preferences</CardTitle><CardDescription>Demo settings. Nothing here is persisted between sessions.</CardDescription></CardHeader>
         <CardContent className="divide-y divide-navy-950/8">
           {rows.map((r) => (
             <div key={r.label} className="flex items-center justify-between py-3.5">

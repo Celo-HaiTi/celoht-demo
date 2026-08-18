@@ -1,6 +1,6 @@
 /** Generates a realistic-looking but clearly-fake Celo transaction hash
  *  for the donation flow demo. Never presented without surrounding
- *  "Demo transaction" labeling — see DonationFlow component. */
+ *  "Demo transaction" labeling; see the DonationFlow component. */
 export function generateDemoTxHash(): string {
   const chars = "0123456789abcdef";
   let out = "0x";

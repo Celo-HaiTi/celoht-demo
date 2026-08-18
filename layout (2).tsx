@@ -3,7 +3,7 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: {
-    default: "CeloHT — Financial Inclusion, Education & Reforestation on Celo",
+    default: "CeloHT: Financial Inclusion, Education & Reforestation on Celo",
     template: "%s · CeloHT",
   },
   description:

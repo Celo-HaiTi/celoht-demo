@@ -19,7 +19,7 @@ export function RoadmapSection() {
         <p className="text-sm font-medium text-green-600">2026–2028</p>
         <h2 className="font-display text-3xl font-medium tracking-tight sm:text-4xl">The real roadmap</h2>
         <p className="mt-3 max-w-2xl text-navy-900/70">
-          Four phases, tracked honestly — including where CeloHT actually stands today, not just where it's headed.
+          Four phases, tracked honestly, including where CeloHT actually stands today, not just where it is headed.
         </p>
 
         <div className="mt-12 grid gap-5 sm:grid-cols-2">

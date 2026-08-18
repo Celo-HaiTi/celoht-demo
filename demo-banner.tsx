@@ -2,7 +2,7 @@ import { Info } from "lucide-react";
 
 /**
  * Persistent, unmissable labeling that this is a simulated product
- * experience — wallets, balances, and transactions are illustrative,
+ * experience. Wallets, balances, and transactions are illustrative,
  * not live. This banner (or the compact <DemoPill />) must appear on
  * every screen that shows financial figures, a wallet address, or a
  * transaction hash. See docs/DEMO_INTEGRITY.md for the full policy.
@@ -13,7 +13,7 @@ export function DemoBanner() {
       <Info className="h-3.5 w-3.5 shrink-0 text-gold-500" />
       <p>
         <span className="font-semibold">Investor demo.</span> Wallets, balances, and transactions on
-        this page are simulated to show the intended product experience — no real funds move and no
+        this page are simulated to show the intended product experience. No real funds move, and no
         blockchain transaction is broadcast.
       </p>
     </div>

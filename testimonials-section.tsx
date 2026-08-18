@@ -11,7 +11,7 @@ export function TestimonialsSection() {
         <p className="text-sm font-medium text-green-600">Representative feedback</p>
         <h2 className="font-display text-3xl font-medium tracking-tight sm:text-4xl">Voices</h2>
         <p className="mt-3 max-w-2xl text-navy-900/70">
-          Illustrative of the kind of feedback CeloHT hears and aims to earn — not attributed quotes from named individuals.
+          Illustrative of the kind of feedback CeloHT hears and aims to earn, not attributed quotes from named individuals.
         </p>
 
         <div className="mt-10 grid gap-5 sm:grid-cols-2">

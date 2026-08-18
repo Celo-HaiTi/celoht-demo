@@ -5,7 +5,7 @@ import { useEffect, useRef } from "react";
 /**
  * Signature hero element: a field of nodes representing the Agent
  * Network / Celo blockchain. Nodes drift slowly and connect when close,
- * occasionally tracing a rising path across the canvas — a quiet nod to
+ * occasionally tracing a rising path across the canvas, a quiet nod to
  * the ascending-bar arrow in the CeloHT mark, rendered as behavior
  * rather than a literal shape. Respects prefers-reduced-motion by
  * freezing on the first frame.

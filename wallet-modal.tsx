@@ -8,7 +8,7 @@ import { truncateHash } from "@/lib/utils/tx";
 
 const PROVIDERS: { id: WalletProvider; name: string; logo?: string; comingSoon?: boolean; note: string }[] = [
   { id: "valora", name: "Valora", logo: "/brand/valora-logo.png", note: "CeloHT's primary supported wallet" },
-  { id: "minipay", name: "MiniPay", logo: "/brand/minipay-logo.png", comingSoon: true, note: "Not yet officially supported — shown for roadmap context" },
+  { id: "minipay", name: "MiniPay", logo: "/brand/minipay-logo.png", comingSoon: true, note: "Not yet officially supported. Shown for roadmap context." },
   { id: "walletconnect", name: "WalletConnect", note: "Connect any WalletConnect-compatible wallet" },
 ];
 
@@ -52,7 +52,7 @@ export function WalletModal({ open, onClose }: { open: boolean; onClose: () => v
                   </div>
                 </div>
                 <p className="mt-3 text-xs text-navy-900/50">
-                  Simulated connection for demo purposes — no real wallet was accessed.
+                  Simulated connection for demo purposes. No real wallet was accessed.
                 </p>
                 <button
                   onClick={() => { disconnect(); }}
@@ -92,7 +92,7 @@ export function WalletModal({ open, onClose }: { open: boolean; onClose: () => v
                   </button>
                 ))}
                 <p className="pt-2 text-center text-xs text-navy-900/40">
-                  This demo simulates a wallet connection — no real wallet extension or app is required.
+                  This demo simulates a wallet connection. No real wallet extension or app is required.
                 </p>
               </div>
             )}

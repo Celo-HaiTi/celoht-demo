@@ -16,7 +16,7 @@ export function EcosystemSection() {
         <p className="text-sm font-medium text-green-600">Built with, not just built for</p>
         <h2 className="font-display text-3xl font-medium tracking-tight sm:text-4xl">Ecosystem</h2>
         <p className="mt-3 max-w-2xl text-navy-900/70">
-          What CeloHT is built on, and who it's exploring formal partnership with — labeled honestly, not inflated.
+          What CeloHT is built on, and who it is exploring formal partnership with, labeled honestly and not inflated.
         </p>
 
         <div className="mt-10 grid gap-4 sm:grid-cols-2">

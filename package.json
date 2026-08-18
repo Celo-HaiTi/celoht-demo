@@ -2,7 +2,7 @@
   "name": "celoht-investor-demo",
   "version": "1.0.0",
   "private": true,
-  "description": "Interactive investor and grant-reviewer demo for CeloHT — Web3 education, financial inclusion, and reforestation, built on Celo.",
+  "description": "Interactive investor and grant-reviewer demo for CeloHT. Web3 education, financial inclusion, and reforestation, built on Celo.",
   "license": "Apache-2.0",
   "scripts": {
     "dev": "next dev --turbopack",

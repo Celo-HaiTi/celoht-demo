@@ -15,13 +15,13 @@ export default function ReforestationPage() {
     <div className="mx-auto max-w-6xl space-y-6">
       <DemoBanner />
       <p className="rounded-lg border border-gold-200 bg-gold-200/20 px-4 py-2.5 text-xs text-navy-900">
-        CeloHT's reforestation program is in <span className="font-medium">design and pilot phase</span> — figures below represent pilot scale, illustrated for this demo.
+        CeloHT's reforestation program is in <span className="font-medium">design and pilot phase</span>. Figures below represent pilot scale, illustrated for this demo.
       </p>
       <div className="grid gap-4 lg:grid-cols-[1.3fr_1fr]">
         <Card>
           <CardHeader>
             <CardTitle>Planting sites</CardTitle>
-            <CardDescription>Léogâne watershed — tap a pin to see site detail</CardDescription>
+            <CardDescription>Léogâne watershed. Tap a pin to see site detail.</CardDescription>
           </CardHeader>
           <CardContent>
             <StylizedMap

@@ -8,7 +8,7 @@ interface WalletState {
   connected: boolean;
   provider: WalletProvider | null;
   address: string | null;
-  balanceCUsd: number;
+  balanceUsdM: number;
   connecting: boolean;
   connect: (provider: WalletProvider) => Promise<void>;
   disconnect: () => void;
@@ -16,11 +16,11 @@ interface WalletState {
 
 /**
  * Simulated wallet connection for the investor demo. No real wallet
- * integration runs here — this generates a plausible-looking address
+ * integration runs here. This generates a plausible-looking address
  * and a short artificial delay so the flow *feels* like a real connect
  * request, which is the brief's explicit ask ("if real wallets are
  * unavailable, simulate successful connection"). Every surface that
- * uses this hook must show the demo/simulation labeling — see
+ * uses this hook must show the demo/simulation labeling; see
  * <DemoBanner /> and the wallet modal's own copy.
  */
 export const WalletContext = createContext<WalletState | null>(null);
@@ -37,7 +37,7 @@ export function useWalletState(): WalletState {
   const [provider, setProvider] = useState<WalletProvider | null>(null);
   const [address, setAddress] = useState<string | null>(null);
   const [connecting, setConnecting] = useState(false);
-  const balanceCUsd = 128.4; // fixed demo balance, intentionally not randomized
+  const balanceUsdM = 128.4; // fixed demo balance, intentionally not randomized
 
   const connect = useCallback(async (p: WalletProvider) => {
     setConnecting(true);
@@ -54,7 +54,7 @@ export function useWalletState(): WalletState {
     setAddress(null);
   }, []);
 
-  return { connected, provider, address, balanceCUsd, connecting, connect, disconnect };
+  return { connected, provider, address, balanceUsdM, connecting, connect, disconnect };
 }
 
 export function useWallet() {

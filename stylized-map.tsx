@@ -13,7 +13,7 @@ export interface MapPoint {
 }
 
 /**
- * A stylized, illustrative map — not a real geographic map with live GPS
+ * A stylized, illustrative map, not a real geographic map with live GPS
  * data. Positions are approximate and for visual storytelling only. Using
  * a real mapping provider would require API credentials this demo
  * doesn't have, and real precise coordinates would misrepresent
@@ -32,7 +32,7 @@ export function StylizedMap({
 
   return (
     <div className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl bg-gradient-to-br from-green-100 via-cream-100 to-green-100">
-      {/* soft terrain contours — decorative, not geographic */}
+      {/* soft terrain contours; decorative, not geographic */}
       <svg className="absolute inset-0 h-full w-full opacity-40" viewBox="0 0 100 75" preserveAspectRatio="none">
         <path d="M0,40 Q25,20 50,35 T100,30 L100,75 L0,75 Z" fill="#6fe0a6" opacity="0.3" />
         <path d="M0,55 Q30,42 60,52 T100,48 L100,75 L0,75 Z" fill="#35d07f" opacity="0.25" />
@@ -71,7 +71,7 @@ export function StylizedMap({
       })}
 
       <p className="absolute bottom-2 right-2 rounded bg-white/70 px-2 py-0.5 text-[10px] text-navy-900/50">
-        Illustrative map — not to scale
+        Illustrative map, not to scale
       </p>
     </div>
   );

@@ -19,7 +19,7 @@ export default function AgentNetworkPage() {
         <Card>
           <CardHeader>
             <CardTitle>Agent locations</CardTitle>
-            <CardDescription>Léogâne region — tap a pin to see agent detail</CardDescription>
+            <CardDescription>Léogâne region. Tap a pin to see agent detail.</CardDescription>
           </CardHeader>
           <CardContent>
             <StylizedMap

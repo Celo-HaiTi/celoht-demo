@@ -1,9 +1,9 @@
 /**
- * DEMO_DATA — everything in this file is illustrative content for the
+ * DEMO_DATA: everything in this file is illustrative content for the
  * investor/grant-reviewer demo, not live figures from CeloHT's real
  * treasury, agent network, or education programs. Every number here is
  * meant to look like a healthy, active version of what CeloHT is
- * actually building toward — not a claim about where it is today.
+ * actually building toward, not a claim about where it is today.
  *
  * This distinction matters: CeloHT's real, current-stage figures live
  * in the celoht-admin platform (see docs/DATA_SOURCES.md there). This
@@ -60,11 +60,11 @@ export interface AgentProfile {
 }
 
 export const AGENTS: AgentProfile[] = [
-  { id: "a1", name: "Agent — Léogâne Centre", region: "Léogâne Centre", x: 32, y: 58, walletsOnboarded: 164, monthlyVolume: 4820, services: ["Cash-in", "Cash-out", "Wallet setup"] },
-  { id: "a2", name: "Agent — Léogâne Nord", region: "Léogâne Nord", x: 40, y: 44, walletsOnboarded: 121, monthlyVolume: 3610, services: ["Cash-in", "Cash-out"] },
-  { id: "a3", name: "Agent — Petit-Goâve", region: "Petit-Goâve", x: 55, y: 62, walletsOnboarded: 98, monthlyVolume: 2980, services: ["Cash-in", "Cash-out", "Merchant onboarding"] },
-  { id: "a4", name: "Agent — Grand-Goâve", region: "Grand-Goâve", x: 47, y: 70, walletsOnboarded: 87, monthlyVolume: 2540, services: ["Wallet setup", "Education referral"] },
-  { id: "a5", name: "Agent — Léogâne Sud", region: "Léogâne Sud", x: 30, y: 74, walletsOnboarded: 143, monthlyVolume: 3990, services: ["Cash-in", "Cash-out", "Wallet setup"] },
+  { id: "a1", name: "Agent: Léogâne Centre", region: "Léogâne Centre", x: 32, y: 58, walletsOnboarded: 164, monthlyVolume: 4820, services: ["Cash-in", "Cash-out", "Wallet setup"] },
+  { id: "a2", name: "Agent: Léogâne Nord", region: "Léogâne Nord", x: 40, y: 44, walletsOnboarded: 121, monthlyVolume: 3610, services: ["Cash-in", "Cash-out"] },
+  { id: "a3", name: "Agent: Petit-Goâve", region: "Petit-Goâve", x: 55, y: 62, walletsOnboarded: 98, monthlyVolume: 2980, services: ["Cash-in", "Cash-out", "Merchant onboarding"] },
+  { id: "a4", name: "Agent: Grand-Goâve", region: "Grand-Goâve", x: 47, y: 70, walletsOnboarded: 87, monthlyVolume: 2540, services: ["Wallet setup", "Education referral"] },
+  { id: "a5", name: "Agent: Léogâne Sud", region: "Léogâne Sud", x: 30, y: 74, walletsOnboarded: 143, monthlyVolume: 3990, services: ["Cash-in", "Cash-out", "Wallet setup"] },
 ];
 
 export interface PlantingSite {
@@ -107,13 +107,13 @@ export const IMPACT_KPIS = [
 export type RoadmapStatus = "Completed" | "Current" | "Upcoming" | "Future";
 
 export const ROADMAP = [
-  { phase: "Phase 1 — Foundation", window: "2026 Q2–Q3", status: "Completed" as RoadmapStatus, items: ["Flagship documentation published", "First agent cohort trained in Léogâne", "First grant applications submitted"] },
-  { phase: "Phase 2 — Validation", window: "2026 Q4–2027 Q1", status: "Current" as RoadmapStatus, items: ["Prove the model end-to-end in Léogâne", "Reforestation pilot survival tracking", "This investor demo + celoht-admin platform"] },
-  { phase: "Phase 3 — Growth", window: "2027", status: "Upcoming" as RoadmapStatus, items: ["Expand beyond the pilot region", "Public dApp beta", "Agent network service-fee sustainability begins"] },
-  { phase: "Phase 4 — Maturity", window: "2028+", status: "Future" as RoadmapStatus, items: ["Governance decentralization", "Regional expansion beyond Haiti", "Full financial self-sustainability"] },
+  { phase: "Phase 1: Foundation", window: "2026 Q2–Q3", status: "Completed" as RoadmapStatus, items: ["Flagship documentation published", "First agent cohort trained in Léogâne", "First grant applications submitted"] },
+  { phase: "Phase 2: Validation", window: "2026 Q4–2027 Q1", status: "Current" as RoadmapStatus, items: ["Prove the model end-to-end in Léogâne", "Reforestation pilot survival tracking", "This investor demo + celoht-admin platform"] },
+  { phase: "Phase 3: Growth", window: "2027", status: "Upcoming" as RoadmapStatus, items: ["Expand beyond the pilot region", "Public dApp beta", "Agent network service-fee sustainability begins"] },
+  { phase: "Phase 4: Maturity", window: "2028+", status: "Future" as RoadmapStatus, items: ["Governance decentralization", "Regional expansion beyond Haiti", "Full financial self-sustainability"] },
 ];
 
-/** Ecosystem section — framed as "built on / works with," not formal
+/** Ecosystem section: framed as "built on / works with," not formal
  *  partnership claims. FreClean stays explicitly prospective. */
 export const ECOSYSTEM = [
   { name: "Celo", role: "Blockchain infrastructure CeloHT is built on", status: "Ecosystem" },
@@ -122,7 +122,7 @@ export const ECOSYSTEM = [
   { name: "FreClean", role: "Local entrepreneurship initiative", status: "Prospective Partner" },
 ];
 
-/** Illustrative persona quotes — not attributed to real named individuals,
+/** Illustrative persona quotes, not attributed to real named individuals,
  *  clearly representative of the kind of feedback CeloHT aims to earn. */
 export const TESTIMONIALS = [
   { quote: "The agent in my neighborhood walked me through my first wallet in Creole, at my own pace. I finally understood what I was holding.", persona: "Community Member", region: "Léogâne" },

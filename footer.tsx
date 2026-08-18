@@ -41,7 +41,7 @@ export function Footer() {
               <span className="font-display text-base font-semibold text-white">CeloHT</span>
             </Link>
             <p className="mt-3 max-w-xs text-sm text-navy-100/60">
-              Community-governed. Léogâne, Haiti. No token, no ICO — built openly, in the open.
+              Community-governed. Léogâne, Haiti. No token, no ICO. Built openly, in the open.
             </p>
           </div>
           {COLUMNS.map((col) => (
