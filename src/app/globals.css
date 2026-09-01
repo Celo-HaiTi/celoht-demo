@@ -1,0 +1,107 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*
+  CeloHT Investor Demo: Design Tokens
+  -----------------------------------------------------------------
+  Palette: CeloHT's own navy + gold (from the mark) paired with
+  Celo's real ecosystem green (prosperity green, #35D07F). This is
+  a demo of a product built on Celo, so the green reads as "powered
+  by," not a rebrand. Typography reuses Fraunces + IBM Plex, the
+  same pairing already established on celoht.com and celoht-admin,
+  so this demo feels like the same organization, not a new one.
+
+  Signature element: a thin "growth line," the ascending-bar arrow
+  from the CeloHT mark, traces once through the hero on load and then
+  reappears as a quiet corner mark on major section transitions.
+*/
+
+@theme {
+  --color-navy-950: #050e1c;
+  --color-navy-900: #0a1a30;
+  --color-navy-800: #14304f;
+  --color-navy-700: #1c3f66;
+  --color-navy-600: #275480;
+
+  --color-green-600: #1f9d5f;
+  --color-green-500: #2fbb73;
+  --color-green-400: #35d07f;
+  --color-green-300: #6fe0a6;
+  --color-green-100: #e0f8ec;
+
+  --color-forest-700: #0f4a33;
+  --color-forest-600: #146c43;
+
+  --color-gold-500: #d9941f;
+  --color-gold-400: #f2ab34;
+  --color-gold-200: #fbdea0;
+
+  --color-cream-50: #faf7f0;
+  --color-cream-100: #f3ede0;
+
+  --font-display: "Fraunces", ui-serif, Georgia, serif;
+  --font-sans: "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, "SF Mono", monospace;
+}
+
+:root {
+  --bg: var(--color-cream-50);
+  --fg: var(--color-navy-950);
+  --card: #ffffff;
+  --card-border: #e7e0d1;
+  --muted: #5a6472;
+}
+
+* {
+  border-color: var(--card-border);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-sans);
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+.font-mono,
+.tabular {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-gold-500);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-navy-700);
+  border-radius: 999px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
