@@ -1,12 +1,36 @@
 # CeloHT Investor Demo
 
-An interactive, investor- and grant-reviewer-facing demo of the CeloHT product experience: a marketing landing page plus a full simulated application, including wallet connect, a donation flow, education, agent network and reforestation maps, treasury, and analytics.
+This repository is a demo product experience for CeloHT. It presents a landing page and a simulated internal dashboard for education, agent network, reforestation, treasury, analytics, and donation flows.
 
-> **This is a demo, not CeloHT's live product.** Every wallet connection, transaction hash, and dashboard figure in this repo is simulated and clearly labeled as such throughout the UI. See [`docs/DEMO_INTEGRITY.md`](docs/DEMO_INTEGRITY.md) for exactly what's simulated and how.
+> This repo is intentionally a demo. Wallet connections, balances, transaction hashes, and dashboard values are simulated and visibly labeled as such throughout the UI. See [docs/DEMO_INTEGRITY.md](docs/DEMO_INTEGRITY.md) for the full integrity policy.
 
-## Tech stack
+## Purpose
 
-Next.js 15 (App Router) · React 19 · TypeScript · Tailwind CSS 4 · Framer Motion · Recharts · Lucide Icons
+- Show what the CeloHT product experience could look and feel like to investors, partners, and grant reviewers
+- Provide a realistic UX prototype without claiming live blockchain activity
+- Keep the simulation clearly separated from real CeloHT operations
+
+## Technology stack
+
+- Next.js 15 (App Router)
+- React 19
+- TypeScript
+- Tailwind CSS 3.4
+- Recharts
+- Framer Motion
+- Lucide React
+
+## Verified status
+
+This repository has been validated with the project’s real toolchain:
+
+```bash
+npm run lint
+npm run typecheck
+npm run build
+```
+
+The app builds successfully and the static pages are generated correctly.
 
 ## Getting started
 
@@ -15,36 +39,65 @@ npm install
 npm run dev
 ```
 
-Open http://localhost:3000 for the landing page, or go straight to `/demo/dashboard` for the interactive application.
+Then open:
+- http://localhost:3000 for the landing page
+- http://localhost:3000/demo/dashboard for the interactive demo dashboard
 
-## Structure
+## Repository structure
 
+```text
+src/
+  app/
+    layout.tsx
+    page.tsx
+    globals.css
+    not-found.tsx
+    demo/
+      layout.tsx
+      dashboard/
+      education/
+      agent-network/
+      reforestation/
+      donations/
+      treasury/
+      analytics/
+      profile/
+      settings/
+  components/
+    marketing/
+    demo/
+    shared/
+    ui/
+  lib/
+    data/demo-data.ts
+    hooks/use-wallet.ts
+    nav-config.ts
+    utils/
+public/
+  brand/
 ```
-src/app/
-  (marketing)/          Landing page: hero, live stats, roadmap, ecosystem, testimonials
-  demo/                 The interactive demo app
-    dashboard/  education/  agent-network/  reforestation/
-    donations/  treasury/  analytics/  profile/  settings/
-src/components/
-  marketing/            Hero, particle field, stats, roadmap, ecosystem, testimonials, footer
-  demo/                 Sidebar, topbar, wallet modal, KPI card, charts, stylized map
-  ui/                   Button, Card
-  shared/                DemoBanner / DemoPill, the honesty layer; see docs/DEMO_INTEGRITY.md
-src/lib/
-  data/demo-data.ts      All illustrative content, in one file, clearly labeled
-  hooks/use-wallet.ts     Simulated wallet-connect state
-  utils/tx.ts             Simulated transaction hash generator
-```
 
-## Design
+## Demo-only behavior
 
-Palette: CeloHT's own navy + gold (from the mark) paired with Celo's real ecosystem green. Typography: Fraunces + IBM Plex Sans/Mono, the same pairing already used on celoht.com and celoht-admin, so this demo reads as the same organization. Signature element: a particle field in the hero where nodes occasionally trace a rising path, a quiet nod to the ascending-bar arrow in the CeloHT mark.
+This repo does not contain:
+- a live production wallet integration
+- real blockchain signing
+- a live smart-contract deployment
+- real treasury or USDm balances
 
-## Related
+The wallet flow is intentionally simulated and explicitly labeled as such. The donation flow also simulates a transaction hash and does not broadcast anything to the Celo network.
 
-- [celoht-admin](https://github.com/Celo-HaiTi/celoht-admin): the real operational platform (also mock-data-first today; see its own `docs/DATA_SOURCES.md`)
-- [CeloHT](https://github.com/Celo-HaiTi/CeloHT): core documentation and governance
-- [celoht.com](https://celoht.com): official website
+## Related links
+
+- [CeloHT GitHub organization](https://github.com/Celo-HaiTi)
+- [CeloHT whitepaper](https://github.com/Celo-HaiTi/CeloHT/blob/main/WHITEPAPER.md)
+- [CeloHT website](https://celoht.com)
+
+## Product readiness
+
+See:
+- [REPOSITORY_PRODUCT_READINESS.md](REPOSITORY_PRODUCT_READINESS.md)
+- [WALLET_COMPATIBILITY.md](WALLET_COMPATIBILITY.md)
 
 ## License
 
