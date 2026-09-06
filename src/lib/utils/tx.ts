@@ -1,11 +1,6 @@
-/** Generates a realistic-looking but clearly-fake Celo transaction hash
- *  for the donation flow demo. Never presented without surrounding
- *  "Demo transaction" labeling; see the DonationFlow component. */
+/** Returns the deterministic placeholder hash used by the donation demo. */
 export function generateDemoTxHash(): string {
-  const chars = "0123456789abcdef";
-  let out = "0x";
-  for (let i = 0; i < 64; i++) out += chars[Math.floor(Math.random() * 16)];
-  return out;
+  return "0x0000000000000000000000000000000000000000000000000000000000000000";
 }
 
 export function truncateHash(hash: string, chars = 8): string {

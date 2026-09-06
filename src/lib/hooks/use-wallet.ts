@@ -4,6 +4,8 @@ import { createContext, useContext, useState, useCallback } from "react";
 
 export type WalletProvider = "valora" | "minipay" | "walletconnect";
 
+export const DEMO_WALLET_ADDRESS = "0x0000000000000000000000000000000000000001";
+
 interface WalletState {
   connected: boolean;
   provider: WalletProvider | null;
@@ -25,13 +27,6 @@ interface WalletState {
  */
 export const WalletContext = createContext<WalletState | null>(null);
 
-function fakeAddress(): string {
-  const chars = "0123456789abcdef";
-  let out = "0x";
-  for (let i = 0; i < 40; i++) out += chars[Math.floor(Math.random() * 16)];
-  return out;
-}
-
 export function useWalletState(): WalletState {
   const [connected, setConnected] = useState(false);
   const [provider, setProvider] = useState<WalletProvider | null>(null);
@@ -43,7 +38,7 @@ export function useWalletState(): WalletState {
     setConnecting(true);
     await new Promise((r) => setTimeout(r, 1100));
     setProvider(p);
-    setAddress(fakeAddress());
+    setAddress(DEMO_WALLET_ADDRESS);
     setConnected(true);
     setConnecting(false);
   }, []);

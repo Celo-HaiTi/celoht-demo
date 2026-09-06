@@ -4,7 +4,9 @@
 
 This repository is a demo product experience for CeloHT. It presents an investor-facing landing page and a simulated interactive dashboard for education, agent network, reforestation, treasury, analytics, and donation flows.
 
-Status: READY FOR DEMO PRESENTATION
+Status: MOCK / DEMO
+
+Audit date: 2026-09-06
 
 ## Architecture
 
@@ -18,7 +20,7 @@ The repo follows a single-page marketing site plus a nested demo app under src/a
 
 ## Technology Stack
 
-- Next.js 15.1.6
+- Next.js 15.5.25
 - React 19.0.0
 - TypeScript 5.7.3
 - Tailwind CSS 4.0.0
@@ -100,9 +102,10 @@ The repo follows a single-page marketing site plus a nested demo app under src/a
 
 ## Tests
 
-- TypeScript validation was executed: PASS
-- Lint validation was executed after configuration fix: PASS
-- No real automated test suite exists for this repo beyond the build and type checks
+- `npm run typecheck`: PASS
+- `npm run lint`: PASS
+- `npm run build`: PASS
+- No dedicated unit, integration, E2E, accessibility, or coverage suite exists in this repository.
 
 ## Build
 
@@ -116,15 +119,28 @@ The repo follows a single-page marketing site plus a nested demo app under src/a
 
 ## Remaining External Dependencies
 
-- None required for the demo to run locally
+- No runtime backend, indexer, wallet provider, or blockchain deployment is required for this demo to run locally.
 - External links to CeloHT GitHub and whitepaper are informational only
 
 ## Remaining Blockers
 
-- No known fixable blockers remain for this repo’s defined responsibility as a demo product experience
+- `npm audit --audit-level=high` reports one high, one moderate, and two low vulnerabilities after the Next.js upgrade. The remaining high finding is in a transitive dependency and requires a dependency-policy decision before using this repo in a public deployment pipeline.
+- No automated behavior, responsive, accessibility, or broken-link tests are configured.
+- This repository cannot provide evidence for live wallet, blockchain, Treasury, indexer, or production data readiness because those systems are intentionally outside its scope.
 
 ## Final Product Readiness Status
 
-READY
+MOCK / DEMO
 
-This repository is ready for its intended role as a CeloHT investor/demo experience, with verified demo behavior, proper labeling, and a clean local build.
+## Approved Status Classification
+
+| Area | Status | Evidence / boundary |
+| --- | --- | --- |
+| Demo UI and routes | IMPLEMENTED | Static Next.js routes build successfully. |
+| Simulated wallet and donation flows | MOCK / DEMO | Deterministic placeholders; no provider, signing, or broadcast. |
+| Celo Sepolia / Mainnet deployment | BLOCKED | No deployment is configured or authorized for this repository. |
+| Live Treasury, balances, and impact data | BLOCKED | No production backend, indexer, or contract integration exists here. |
+| Production wallet compatibility | PLANNED | Wallet providers are represented only as simulated UI states. |
+| Dependency security gate | BLOCKED | npm audit still reports unresolved vulnerabilities. |
+
+The repository fulfills its current demo role with verified routes, explicit simulation labeling, and a clean local build; it is not a production wallet, blockchain, Treasury, backend, or indexer implementation.

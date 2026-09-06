@@ -30,6 +30,8 @@ export default function DonationsPage() {
   function reset() {
     setStep("form");
     setAmount(25);
+    setTxHash("");
+    setCopied(false);
   }
 
   function copyHash() {

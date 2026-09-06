@@ -9,7 +9,7 @@ Every piece of simulated realism in this repo follows one rule: **it must be lab
 | Feature | What's simulated | Where the label lives |
 |---|---|---|
 | Wallet connect | `src/lib/hooks/use-wallet.ts` generates a fake address and a ~1s artificial delay; no real Valora/MiniPay/WalletConnect session is opened | Wallet modal states "Simulated connection... no real wallet was accessed" every time it opens |
-| Donation transaction hash | `src/lib/utils/tx.ts`'s `generateDemoTxHash()` produces a realistic-looking but random hex string | Success screen states explicitly: "no real USDm/CELO moved and nothing was broadcast" |
+| Donation transaction hash | `src/lib/utils/tx.ts`'s `generateDemoTxHash()` produces a deterministic placeholder hex string | Success screen states explicitly: "no real USDm/CELO moved and nothing was broadcast" |
 | Maps (Agent Network, Reforestation) | `src/components/demo/stylized-map.tsx` uses illustrative pin positions on a decorative terrain background, not real GPS coordinates on a real map provider | "Illustrative map, not to scale" caption on every map instance |
 | All dashboard figures | `src/lib/data/demo-data.ts` uses seeded, hand-written illustrative numbers | `<DemoBanner />` on every page that shows them |
 | Testimonials | Representative persona quotes, not attributed to real named individuals | Section subhead: "Illustrative of the kind of feedback... not attributed quotes from named individuals" |
