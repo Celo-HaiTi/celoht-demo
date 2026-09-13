@@ -60,7 +60,7 @@ export function Footer() {
           ))}
         </div>
         <div className="mt-12 border-t border-white/10 pt-6 text-xs text-navy-100/40">
-          © 2026 CeloHT · Apache 2.0 Licensed · Founded by Johnny Dubic
+          © 2026 CeloHT · Apache 2.0 Licensed · Johnny Dubic — Permanently Recognized Founder of CeloHT
         </div>
       </div>
     </footer>
