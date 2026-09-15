@@ -9,14 +9,16 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint .",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "test": "node --test tests/*.test.js",
+    "guard:prod-mocks": "node ./scripts/check-prod-mock-imports.mjs"
   },
   "dependencies": {
     "class-variance-authority": "0.7.1",
     "clsx": "2.1.1",
     "framer-motion": "11.15.0",
     "lucide-react": "0.469.0",
-    "next": "15.5.25",
+    "next": "16.3.5",
     "react": "19.0.0",
     "react-dom": "19.0.0",
     "recharts": "2.15.0",
@@ -28,8 +30,8 @@
     "@types/react": "19.0.4",
     "@types/react-dom": "19.0.2",
     "autoprefixer": "^10.5.4",
-    "eslint": "9.17.0",
-    "eslint-config-next": "15.5.25",
+    "eslint": "9.39.5",
+    "eslint-config-next": "16.3.5",
     "postcss": "^8.5.26",
     "tailwindcss": "^3.4.17"
   },
